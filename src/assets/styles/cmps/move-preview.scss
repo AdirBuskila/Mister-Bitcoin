@@ -1,0 +1,40 @@
+.user-moves {
+    width: 430px;
+  .moves-list-container {
+    border-radius: 3px;
+    background-color: rgba(78, 76, 76, 0.76);
+    margin-block-start: 15px;
+      padding: 10px 50px;
+      h1{
+        text-align: center;
+      }
+    .clean-list {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        width: 100%;
+        gap: 15px;
+      .move-preview-container {
+        .move-preview {
+            font-size: 25px;
+            .move-amount{
+                color: lightgreen;
+                span{
+                    color: #949690
+                }
+            }
+            .move-status{
+                font-size: 20px;
+                span{
+                    color:#3db1d6
+                }
+            }
+            .move-date{
+                font-size: 18px;
+
+            }
+        }
+      }
+    }
+  }
+}

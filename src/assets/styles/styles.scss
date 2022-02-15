@@ -1,0 +1,28 @@
+// Setup
+@import 'setup/typography.scss';
+@import 'setup/variables.scss';
+@import 'setup/functions.scss';
+// @import "setup/mixins.scss";
+
+// Basics
+@import 'basics/helpers.scss';
+@import 'basics/base.scss';
+
+// PAGES
+@import 'pages/dashboard.scss';
+@import 'pages/home-page.scss';
+@import 'pages/contact-details.scss';
+@import 'pages/contact-edit.scss';
+
+// Components
+@import 'cmps/app-header.scss';
+@import 'cmps/contact-preview.scss';
+@import 'cmps/contact-list.scss';
+@import 'cmps/contact-filter.scss';
+@import 'cmps/transfer-funds.scss';
+@import 'cmps/move-preview.scss';
+@import 'cmps/coin-list.scss';
+@import 'cmps/coin-preview.scss';
+@import 'cmps/coin-changes.scss';
+
+

@@ -1,0 +1,24 @@
+.contact-preview-container{
+    padding: 10px;
+    background-color: rgb(133, 132, 132);
+    border-radius: 7px;
+    .contact-preview{
+        width: 500px;
+        gap: 30px;
+        .contact-img-container{
+            img.contact-img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+        .contact-info{
+            font-size: 2rem;
+        }
+        .add-container {
+            img{
+                margin-block-start: 10px;
+                width: 50px;
+            }            
+        }
+    }
+}

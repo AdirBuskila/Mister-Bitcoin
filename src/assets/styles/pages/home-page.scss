@@ -1,0 +1,38 @@
+.home-page {
+  font-size: 2rem;
+  .home-container {
+    .home-page-cover {
+      padding: 10px;
+      border-radius: 4px;
+      background-color: rgba(78, 76, 76, 0.76);
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .home-page {
+    .home-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .line-chart-container {
+      border: none;
+    }
+  }
+}
+@media only screen and (max-width: 515px) {
+  .home-page {
+    .home-container {
+      .home-page-cover {
+        font-size: large;
+      }
+      .line-chart-container {
+        width: 85vw;
+      }
+    }
+    .moves-list-container {
+      margin: auto;
+      width: 85vw;
+    }
+  }
+}
