@@ -1,11 +1,24 @@
-.coin-list {
+.coin-list-container {
+    width: 100%;
+  .coin-list {
     height: 40vh;
     width: inherit;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 10px;
-    padding: 0 40px;
-    grid-template-rows:  auto;
+    padding-inline-end: 32px;
+    padding-inline-start: 20px;
+    grid-template-rows: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+    .coin-list-container {
+      .coin-list {
+        padding-inline-end: 20px;
+        padding-inline-start: 20px;
+      }
+    }
 
 }

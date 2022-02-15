@@ -1,4 +1,5 @@
 <template>
+        <div class="coin-list-container flex ">
         <ul class="coin-list">
             <li
             v-for="coin in coins"
@@ -7,6 +8,7 @@
             <CoinPreview :coin="coin" />
             </li>
         </ul>
+        </div>
 </template>
 
 <script>

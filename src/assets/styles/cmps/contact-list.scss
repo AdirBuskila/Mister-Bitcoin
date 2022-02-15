@@ -6,3 +6,25 @@
         gap: 10px;    
     }
 }
+
+@media only screen and (max-width: 540px) {
+    .contacts-page {
+        h1 {
+            text-align: center;
+        }
+        .contact-list{
+            gap: 10px;
+            .contact-preview-container{
+                width: 90%;
+                .contact-preview{
+                    align-items: center;
+                    width: 100%;
+                    p{
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }    
+        }
+    }    
+}

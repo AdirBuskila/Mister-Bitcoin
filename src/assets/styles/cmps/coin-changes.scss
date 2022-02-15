@@ -19,3 +19,15 @@
     color: rgb(128, 255, 111);
   }
   
+
+  @media only screen and (max-width: 500px) {
+    .coin-changes{
+      
+      .change{
+        p{
+          font-size: medium;
+        }
+      }
+    }
+    
+  }

@@ -44,6 +44,15 @@ export default {
 
 .line-chart-container {
   height: 700px;
+  width: 95%;
+}
+
+@media only screen and (max-width: 500px ) {
+  .line-chart-container {
+    height: 700px;
+    width: 90%;
+  }
+  
 }
 
 </style>
