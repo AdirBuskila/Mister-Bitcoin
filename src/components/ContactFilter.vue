@@ -1,6 +1,6 @@
 <template>
   <section class="contact-filter flex justify-center">
-    <input class="filter-input" type="text" placeholder="Search contact..." v-model="filterBy.name" @input="setFilter" />
+    <input v-focus class="filter-input" type="text" placeholder="Search contact..." v-model="filterBy.name" @input="setFilter" />
   </section>
 </template>
 

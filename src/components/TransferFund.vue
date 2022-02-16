@@ -10,8 +10,8 @@
         class="transfer-form flex align-center"
       >
         <h1>Amount:</h1>
-        <input type="integer" v-model="coins" :max="maxCoins" />
-        <button>Transfer</button>
+        <input :class="inputClass" type="integer" v-model="coins" :max="maxCoins" />
+        <button :disabled="btnStatus">Transfer</button>
         <h4 class="max-coins">Max:{{ maxCoinsDisplay }}₿</h4>
       </form>
     </div>
@@ -57,6 +57,12 @@ export default {
     maxCoinsDisplay() {
       return utilService.financial(this.maxCoins, 2);
     },
+    inputClass() {
+      return (this.coins >= this.maxCoins) ? 'max' : ''
+    },
+    btnStatus() {
+      return (this.coins >= this.maxCoins) ? true : false
+    }
   },
 };
 </script>

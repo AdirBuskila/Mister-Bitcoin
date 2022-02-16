@@ -1,15 +1,16 @@
-.app-header{
-    padding-top: 5px;
-    font-size: 1.3rem;
+.app-header {
+  padding-top: 5px;
+  font-size: 1.3rem;
+  span {
+    color: #f79413;
+  }
 }
 
 @media only screen and (max-width: 515px) {
-    .app-header{
-        font-size: 1rem;
-        h3 {
-            font-size: 1rem;
-            
-        }
+  .app-header {
+    font-size: 1rem;
+    h3 {
+      font-size: 1rem;
     }
-    
+  }
 }

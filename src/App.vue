@@ -9,6 +9,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import UserMsg from './components/UserMsg.vue';
+import router from './router';
 
 export default {
   components: {
@@ -17,7 +18,7 @@ export default {
 },
   async created() {
     await this.$store.dispatch({type: 'loadContacts'})
-    await this.$store.dispatch({type: 'loadUser'})
+    if (!this.$store.getters.user) router.push('/signup')
   }
 }
 </script>

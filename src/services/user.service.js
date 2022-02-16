@@ -4,6 +4,15 @@ export const userService = {
     getUser,
     setUser,
     getMove,
+    getEmptyUser,
+}
+
+function getEmptyUser() {
+    return {
+        name: '',
+        coins: 20,
+        moves: [],
+    }
 }
 
 let user = {

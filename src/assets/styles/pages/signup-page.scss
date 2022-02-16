@@ -1,0 +1,32 @@
+.signup-page {
+  .signup-container {
+    margin-top: 100px;
+    gap: 15px;
+    background-color: rgba(78, 76, 76, 0.76);
+    border-radius: 3px;
+    padding-bottom: 20px;
+    img {
+      width: 400px;
+    }
+    input {
+      border-radius: 3px;
+      height: 30px;
+    }
+    button {
+      border-radius: 3px;
+      height: 20px;
+      width: 90px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .signup-page {
+    .signup-container {
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
