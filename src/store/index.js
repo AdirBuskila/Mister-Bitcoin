@@ -14,7 +14,7 @@ const store = createStore({
     actions: {},
     modules: {
         contactModule,
-        userModule
+        userModule,
     }
 });
 

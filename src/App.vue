@@ -1,8 +1,16 @@
 <template>
   <div class="app">
-    <AppHeader />
+    <AppHeader
+      :setOpenedLocation="setOpenedLocation"
+      :setMenubarClass="setMenubarClass"
+    />
     <RouterView />
     <UserMsg />
+    <MenuBar
+      :openedLocation="openedLocation"
+      :setMenubarClass="setMenubarClass"
+      :class="menubarClass"
+    />
   </div>
 </template>
 
@@ -10,19 +18,33 @@
 import AppHeader from './components/AppHeader.vue';
 import UserMsg from './components/UserMsg.vue';
 import router from './router';
+import MenuBar from './components/MenuBar.vue';
 
 export default {
   components: {
     AppHeader,
-    UserMsg
-},
+    UserMsg,
+    MenuBar,
+  },
+  data() {
+    return {
+      menubarClass: '',
+    };
+  },
+  methods: {
+    setMenubarClass(value) {
+      this.menubarClass = value;
+    },
+  },
   async created() {
-    await this.$store.dispatch({type: 'loadContacts'})
-    if (!this.$store.getters.user) router.push('/signup')
-  }
-}
+    await this.$store.dispatch({ type: 'loadContacts' });
+    await this.$store.dispatch({
+      type: 'saveUser',
+      user: { name: 'sauske', coins: 20, moves: [] },
+    });
+    // if (!this.$store.getters.user) router.push('/signup')
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

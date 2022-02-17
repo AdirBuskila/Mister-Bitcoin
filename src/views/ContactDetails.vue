@@ -44,19 +44,22 @@ export default {
     this.contact = await contactService.get(id);
     this.contactImg = `https://robohash.org/${this.contact.name}`;
   },
-    computed: {
-      user() {
-        return this.$store.getters.user;
-      },
+  computed: {
+    user() {
+      return this.$store.getters.user;
     },
+  },
   methods: {
     async transferCoins(coins) {
       const move = userService.getMove(this.contact, coins);
       const newAmount = this.user.coins - coins;
-      const newMoves = [...this.user.moves, move]
-      const newUser = { ...this.user, coins: newAmount, moves: newMoves};
+      const newMoves = [...this.user.moves, move];
+      const newUser = { ...this.user, coins: newAmount, moves: newMoves };
       await this.$store.dispatch({ type: 'saveUser', user: newUser });
-      eventBus.emit('show-msg', { type: 'success', txt: `${coins}₿ Transferred to: ${this.contact.name}` });
+      eventBus.emit('show-msg', {
+        type: 'success',
+        txt: `${coins}₿ Transferred to: ${this.contact.name}`,
+      });
     },
   },
 };

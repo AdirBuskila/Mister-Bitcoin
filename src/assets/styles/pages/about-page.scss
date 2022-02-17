@@ -1,0 +1,58 @@
+.about-page-container {
+  .about-page {
+    margin-top: 50px;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(78, 76, 76, 0.76);
+    border-radius: 3px;
+    padding: 20px;
+    gap: 10px;
+    img {
+      width: 200px;
+    }
+    .social-container {
+      margin-top: 30px;
+      gap: 20px;
+      a {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+      }
+      .facebook {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/cpoupvuhehxw5jnguc5j.png');
+      }
+      .linkedin {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/plu4uuokjpxpda10n3ya.png');
+      }
+      .github {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/gqbrogju5ufptbp6a0zp.png');
+      }
+      .facebook:hover {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/jp1rbf6cglczcgqcjwav.png');
+      }
+      .linkedin:hover {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/lxl4ldzchb3yo3slutko.png');
+      }
+      .github:hover {
+        background: url('https://res.cloudinary.com/dubjerksn/image/upload/v1645119517/Stuff/tqbyjrcwrbmveiysstoa.png');
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-page-container {
+    .about-page {
+      margin-top: 50px;
+      height: 500px;
+      width: 350px;
+      background-color: rgba(78, 76, 76, 0.76);
+      border-radius: 3px;
+      //   padding: 20px;
+      gap: 10px;
+      img {
+        width: 200px;
+      }
+    }
+  }
+}

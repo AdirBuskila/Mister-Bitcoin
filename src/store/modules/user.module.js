@@ -15,13 +15,12 @@ export default {
         },
     },
     actions: {
-        async loadUser({commit}) {
+        async loadUser({ commit }) {
             const user = userService.getUser();
             commit({ type: 'setUser', user });
         },
-        async saveUser({commit}, { user }) {
+        async saveUser({ commit }, { user }) {
             const updatedUser = userService.setUser(user);
-            console.log('updatedUser in store', updatedUser)
             commit({ type: 'setUser', user: updatedUser });
         },
     },

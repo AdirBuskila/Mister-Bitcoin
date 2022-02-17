@@ -1,16 +1,36 @@
 .app-header {
   padding-top: 5px;
   font-size: 1.3rem;
+  justify-content: space-around;
   span {
     color: #f79413;
+  }
+  .menu-bar-container {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 515px) {
   .app-header {
+    justify-content: space-between;
     font-size: 1rem;
     h3 {
       font-size: 1rem;
+    }
+    .nav-link-container {
+      display: none;
+    }
+    .header-title-container {
+      margin-inline-start: 10px;
+      margin-block-start: 3px;
+    }
+    .menu-bar-container {
+      display: block;
+      img {
+        margin-block-start: 1px;
+        margin-inline-end: 10px;
+        width: 35px;
+      }
     }
   }
 }

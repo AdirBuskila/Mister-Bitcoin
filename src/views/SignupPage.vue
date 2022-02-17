@@ -5,8 +5,19 @@
         src="https://res.cloudinary.com/dubjerksn/image/upload/v1644951527/t6l0nyvqwbhroxubmyft.gif"
       />
       <h1>Please Enter your name</h1>
-      <input v-model="username" placeholder="Enter Name" type="text" />
-      <button :onclick="onSignup">Sign-Up</button>
+      <form
+        class="signup-form flex column justify-center align-center"
+        @submit.prevent="onSignup"
+      >
+        <input
+          v-focus
+          v-model="username"
+          placeholder="Enter Name"
+          type="text"
+        />
+
+        <button>Sign-Up</button>
+      </form>
     </div>
   </section>
 </template>
@@ -33,9 +44,7 @@ export default {
       let user = userService.getEmptyUser();
       user.name = this.username;
       await this.$store.dispatch({ type: 'saveUser', user });
-      console.log('here');
       router.push('/');
-      console.log('also here');
     },
   },
 };
