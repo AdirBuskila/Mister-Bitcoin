@@ -64,7 +64,6 @@ export default {
     this.userBtc = (this.currBtcPrice * this.user.coins).toFixed(1);
     this.coinsPrice = await bitcoinService.getCoinsForPreview();
     this.coinsNews = await bitcoinService.getCoinNews();
-    console.log('this.coinsNews', this.coinsNews);
   },
   computed: {
     user() {
