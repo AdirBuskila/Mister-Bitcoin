@@ -1,0 +1,26 @@
+.coins-list-container {
+  width: 160px;
+  background-color: rgba(78, 76, 76, 0.76);
+  border-right: 1px white solid;
+  .coin-price-list-container {
+    .coin-price-list {
+      flex-direction: column;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .coins-list-container {
+    width: 100%;
+    border-right: none;
+    .coin-price-list-container {
+      width: 100%;
+      .coin-price-list {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-direction: row;
+      }
+    }
+  }
+}

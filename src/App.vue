@@ -1,16 +1,9 @@
 <template>
   <div class="app">
-    <AppHeader
-      :setOpenedLocation="setOpenedLocation"
-      :setMenubarClass="setMenubarClass"
-    />
+    <AppHeader :setMenubarClass="setMenubarClass" />
     <RouterView />
     <UserMsg />
-    <MenuBar
-      :openedLocation="openedLocation"
-      :setMenubarClass="setMenubarClass"
-      :class="menubarClass"
-    />
+    <MenuBar :setMenubarClass="setMenubarClass" :class="menubarClass" />
   </div>
 </template>
 
@@ -38,11 +31,7 @@ export default {
   },
   async created() {
     await this.$store.dispatch({ type: 'loadContacts' });
-    await this.$store.dispatch({
-      type: 'saveUser',
-      user: { name: 'sauske', coins: 20, moves: [] },
-    });
-    // if (!this.$store.getters.user) router.push('/signup')
+    if (!this.$store.getters.user) router.push('/signup');
   },
 };
 </script>

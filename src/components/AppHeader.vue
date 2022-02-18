@@ -30,7 +30,6 @@
 export default {
   props: {
     setMenubarClass: Function,
-    setOpenedLocation: Function,
   },
   computed: {
     isLogin() {

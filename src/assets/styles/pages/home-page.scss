@@ -5,6 +5,7 @@
       padding: 10px;
       border-radius: 4px;
       background-color: rgba(78, 76, 76, 0.76);
+      justify-content: flex-start;
     }
   }
 }
@@ -27,7 +28,8 @@
         font-size: large;
       }
       .line-chart-container {
-        width: 85vw;
+        width: 90vw;
+        margin-block-end: 25px;
       }
     }
     .moves-list-container {

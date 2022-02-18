@@ -31,7 +31,6 @@ import router from '../router';
 export default {
   props: {
     setMenubarClass: Function,
-    openedLocation: String,
   },
   methods: {
     closeMenu() {

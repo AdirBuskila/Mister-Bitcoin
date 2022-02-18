@@ -1,0 +1,13 @@
+@media only screen and (max-width: 960px) {
+  .coin-price-preview {
+    font-size: smaller;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80%;
+    }
+    .coin-price {
+      font-size: 18px;
+    }
+  }
+}
